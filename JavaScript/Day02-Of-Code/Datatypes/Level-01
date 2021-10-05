@@ -1,0 +1,58 @@
+// Declare a variable named challenge and assign it to an initial value '30 Days Of JavaScript'
+var challenge = '100 Days Of JavaScript';
+console.log(challenge);
+// print the length of the string
+console.log(challenge.length);
+// print the string to uppercase
+console.log(challenge.toUpperCase());
+// print the string to Lowercase
+console.log(challenge.toLowerCase());
+// sclice(cut out) the first word using substr() or substring() 
+console.log(challenge.substr(0,1));
+// sclice(cut out)Days Of JavaScript from 30 Days Of JavaScript  using substr() or substring() 
+console.log(challenge.substr(2,19));
+// Check if the string contains a word script using includes() method
+console.log(challenge.includes('Script'));
+// Split the string into an array using split() method
+console.log(challenge.split());
+// split facebook , Google , Microsoft , Apple , IBM , Oracle , Amazon 
+var companies = 'facebook , Google , Microsoft , Apple , IBM , Oracle , Amazon ';
+console.log(companies.split());
+// Change 30 Days Of JavaScript to 30 Days Of Python using replace method()
+// and what is character at index 15 in '30 Days Of JavaScript' ? Use charAt() method 
+console.log(challenge.replace('JavaScript','Python'));
+console.log(challenge.charAt(15));
+
+// What is the character code of J in'30 Days Of JavaScript' using charCodeAt()
+console.log(challenge.charCodeAt(8));
+// use IndexOf to determine the first occurence of a in in'30 Days Of JavaScript'
+console.log(challenge.indexOf('a'));
+
+// use IndexOf to determine the last occurence of a in in'30 Days Of JavaScript'
+console.log(challenge.lastIndexOf('a'));
+
+// use indexOf to find the position of the first occurence of the word because in the following sentences
+var newSentence = 'You cannot end the sentence with because because because is a conjection'
+console.log(newSentence.indexOf('because'));
+// use lastIndexOf to find the position of the last occurence of the word because in the following sentences
+console.log(newSentence.lastIndexOf('because'));
+// use Search to find the position of the first occurence of the word because in the following sentences
+console.log(newSentence.search('because'));
+// use trim  to remove any traling whitespace at the  beginning and the end of the string
+console.log(newSentence.trim());
+
+//  Use startWith() method with the string '30 Days Of JavaScript' and make the result true
+console.log(challenge.startsWith());
+
+//  Use startWith() method with the string '30 Days Of JavaScript' and make the result true
+console.log(challenge.endsWith());
+
+// Use match() to find all the a's in 30 Days Of JavaScript
+console.log(challenge.match('a'));
+
+// use concat() and merge '30 Days Of ' and 'JavaScript' to '30 Days Of JavaScript' 
+var course = '30 Days Of ';
+console.log(course.concat('JavaScript') );
+
+// use repeat to print 30 Days Of JavaScript 2 times 
+console.log(challenge.repeat(2));

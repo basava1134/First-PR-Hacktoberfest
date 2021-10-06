@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class selection_sort {
+    static void selection(int arr[], int n){
+        int temp,i,j;
+        for(  i=0;i<=n-1;i++){
+            int mini=i;
+            for( j=i+1;j<n;j++){
+                if(arr[j]<arr[mini]){
+                    mini=j;
+                }
+            
+            }
+            temp =arr[mini];
+            arr[mini]=arr[i];
+            arr[i]=temp;
+           
+        
+    }
+    for(i=0;i<n;i++){
+        System.out.print(arr[i]+ " ");
+    }
+    
+}
+
+
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        int i;
+        System.out.print("No of elements-");
+        int n = sc.nextInt();
+        System.out.print("elements-");
+
+        int arr[] = new int[n];
+        for(i=0;i<n;i++){
+            arr[i]= sc.nextInt();
+        }
+         selection(arr,n);
+    
+
+    
+}
+}

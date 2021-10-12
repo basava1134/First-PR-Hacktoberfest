@@ -1,0 +1,80 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mails
+{
+    background:#59ABE3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+.form
+{
+    width:340px;
+    height:440px;
+    background:#e6e6e6;
+    border-radius:8px;
+    box-shadow:0 0 40px -10px #000;
+    margin:auto;
+    padding:20px 30px;
+    position:relative
+}
+.mails h2
+{
+    margin:20px 0;
+    padding-bottom:10px;
+    width:180px;
+    color:#474B4F;
+    border-bottom:3px solid #78788c
+}
+input, textarea
+{
+    width:100%;
+    margin-bottom: 30px;
+    padding:10px;
+    background:none;
+    outline:none;
+    resize:none;
+    border:0;
+    border-bottom:2px solid #6B6E70
+}
+button
+{
+    float:right;
+    padding:8px 12px;
+    margin:8px 0 0;
+    border:2px solid #4b8cfb;
+    border-radius: 50px;
+    background: none;
+    color:#474B4F;
+    cursor:pointer;
+}
+button:hover
+{
+    background:#4b8cfb;
+    color:#fff
+}
+.num_email
+{
+    position:absolute;
+    bottom:-15px;
+    right:-20px;
+    background:#50505a;
+    color:#fff;
+    width:320px;
+    padding:16px 4px 16px 0;
+    border-radius:6px;
+    font-size:13px;
+    box-shadow:10px 10px 40px -14px #000;
+    display: flex;
+    justify-content: space-around;
+}
+.num_email i{
+    margin:0 5px 0 15px;
+}

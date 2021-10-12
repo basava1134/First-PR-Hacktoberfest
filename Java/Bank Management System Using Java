@@ -1,0 +1,105 @@
+//For Account Module
+
+package BankAccount;
+
+public class Account 
+{
+    private double balance;
+    private long accNum;
+    private String accHolder;
+     
+     public Account(String name, long num)
+     {
+    	 accHolder = name;
+         accNum = num;
+         balance = 0.00;
+    	 System.out.println("Account Created");
+     }
+     
+     public void deposit(double amt)
+     {
+    	 balance = balance + amt;
+    	 System.out.println("Amount Deposited.");
+     }
+     
+     public void withdraw(double amt) throws BankAccountException
+     {
+    	 try
+    	 { 
+    	    if(balance &gt;= amt)
+    	    {
+    		    balance = balance - amt;
+        	    System.out.println("Amount Withdrawn");
+    	    }
+    	    else
+    	    {
+    		    throw new BankAccountException("Could not Withdraw: Insufficent Amount.");
+    	    }
+    	 }
+    	 catch(BankAccountException bae)
+    	 {
+              bae.printStackTrace();
+         }
+     }
+     
+     public void printBalance()
+     {
+    	 System.out.println("Current balance: " + balance);    	 
+     }
+     public double getBalance()
+     {
+         return balance;
+     }
+}
+
+
+//For Creating Account Module
+
+String name; 
+        long num; 
+        name = JOptionPane.showInputDialog(null, "Please Enter Account Holder Name:", "Create Account", 1);
+        num = 1332522123;
+        acc = new Account(name, num);
+        JOptionPane.showMessageDialog(null, "Account Succesfully Created!", "Create Account", 1);
+        
+ //For Deposit Module
+     
+     try
+        {
+           String num;
+           num = JOptionPane.showInputDialog(null, "Enter a Value To Deposit:", "Deposit Amount", 1);
+           double num1 = Double.parseDouble(num);
+           acc.deposit(num1);
+        }
+        catch(NumberFormatException | NullPointerException nfe1)
+        {
+            JOptionPane.showMessageDialog(null, nfe1, "Error", 2);
+        }
+        
+//For The Withdraw Module
+
+try
+           {
+               String num;
+               num = JOptionPane.showInputDialog(null, "Enter a Amount To Withdraw:", "Withdraw Amount", 1);
+               double num1 = Double.parseDouble(num);
+               acc.withdraw(num1);
+           }
+           catch(BankAccountException | NumberFormatException | NullPointerException ex)
+           {
+               JOptionPane.showMessageDialog(null, ex, "Error", 2);
+           }
+           
+           
+//For Check Balance Module
+
+try
+       {
+         double num = acc.getBalance();
+         JOptionPane.showMessageDialog(null, "Current Balance: " + num, "Current Balance", 1);
+       }
+       catch(NullPointerException npe)
+       {
+           JOptionPane.showMessageDialog(null, npe, "Error", 2);
+       }
+        

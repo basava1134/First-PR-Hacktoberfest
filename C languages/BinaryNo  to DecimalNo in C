@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+ 
+    void main()
+    {
+      long int i,n,x=0,a;
+      printf("Enter any binary number: ");
+      scanf("%ld",&n);
+      printf("\nThe decimal conversion of %ld is ",n);
+      
+      for(i=0;n!=0;i++)
+      {
+            a=n%10;
+            x=(a)*(pow(2,i))+x;
+            n=n/10;
+      }
+      
+      printf("%ld",x);
+}
+
+
+Binary is the simplest kind of number system that uses only two digits of 0 and 1 (i.e. value of base 2).
+Whereas Decimal number is most familiar number system to the general public.
+It is base 10 which has only 10 symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9.
+For eg Binary of 5 is 101 
+ When user inputs binary no such as 101 output will be 5.

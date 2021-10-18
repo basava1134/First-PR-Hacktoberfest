@@ -1,6 +1,6 @@
 # Relaxer App
 
-A browser based relax breathing app with a visual pointer to tell you when to breathe in, hold and breathe out.
+A browser based ``` JavaScript ```  breathe relaxing app with a visual pointer to tell when to breathe in, hold and breathe out.
 
 <hr>
 

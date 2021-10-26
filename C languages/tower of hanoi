@@ -1,0 +1,26 @@
+ #include <stdio.h>
+ // recursive function declaration
+ void towers(int , char , char , char );
+ int main(){
+ int num;
+ printf("Enter Number of Disks\n");
+ scanf("%d",&num);
+ printf("\nMoves\n");
+ // recursive function calling
+ towers(num, 'A', 'B', 'C'); //A, B, C are the three pegs or
+Towers.
+ return 0;
+ }//main() ends here
+ 
+ // recursive function definition
+ void towers(int n, char beg, char aux, char end){
+ if(n == 1){
+ printf("%c --> %c\n", beg, end);
+ }
+ else{
+ towers(n-1, beg, end, aux);
+ towers(1, beg, aux, end);
+ towers(n-1, aux, beg, end);
+ }
+ 
+ }

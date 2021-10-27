@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+
+class node{
+
+    public:
+    int data;
+    node* next;
+    node(int d){
+        data = d;
+        next = NULL;
+    }
+
+};
+
+void insert(node* &head, int d)
+{
+    node *temp = new node(d);
+    temp->next = head;
+    head = temp;
+}
+
+void print(node* &head)
+{
+    node *temp = head;
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<" ";
+        temp  = temp->next;
+    }
+}
+
+void linearSearch(node* &head, int a)
+{
+    node* temp = head;
+    int found =0;
+    while(temp!=NULL)
+    {
+        if(temp->data==a)
+        {
+            found = 1;
+            break;
+        }
+        temp = temp->next;
+    }
+    if(found)
+        cout<<"Found";
+    else
+        cout<<"Not Found";
+        
+}
+
+int main()
+{
+    node* head = NULL;
+    insert(head, 4);
+    insert(head, 5);
+    insert(head, 8);
+    insert(head, 3);
+    insert(head, 0);
+    insert(head, 2);
+    print(head);
+    int n;
+    cout<<"Enter a number to be searched: ";
+    cin>>n;
+    linearSearch(head,n);
+    return 0;
+}

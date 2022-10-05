@@ -1,37 +1,27 @@
 #include<stdio.h>
-#include<ctype.h>
 #include<string.h>
-char stack[100];
-int top = -1;
-/* Pushing the stack*/
-void push(char x)
+void reverse_string(char string[]);
+main()
 {
-    stack[++top] = x;
+char string[100];
+printf("Enter the string: ");
+gets(string);
+reverse_string(string);
+printf("\nThe reversed string is :");
+puts(string);
 }
-/* Poping from the stack*/
-char pop()
+void reverse_string(char string[])
 {
-    if(top == -1)
-        return -1;
-    else
-        return stack[top--];
+char temp;
+int n = strlen(string);
+int low_limit = 0;
+int high_limit = n-1;
+while(low_limit<high_limit)
+{
+temp = string[low_limit];
+string[low_limit]=string[high_limit];
+string[high_limit] = temp;
+high_limit --;
+low_limit ++;
 }
-int main()
-{
-    char str[100];
-    /*Taking the string as input*/
-    gets(str);
-    /*finding the length of the string*/
-    int l=strlen(str),i;
-    /*Pushing from the stack*/
-    for(i=0;i<l;i++)
-    {
-        push(str[i]);
-    }
-    /*Printing the array in reverse order*/
-    for(i=0;i<l;i++)
-    {
-        printf("%c", pop());
-    }
-    
 }
